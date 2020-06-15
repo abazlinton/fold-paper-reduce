@@ -2,16 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
-import PaperSection from './PaperSection';
+import PaperSections from './PaperSections';
 
 ReactDOM.render(
   <React.StrictMode>
-    <PaperSection
-      left={100}
-      top={100}
-      mass={50}
-      size={150}
-    />
+    <PaperSections></PaperSections>
   </React.StrictMode>,
   document.getElementById('root')
 );

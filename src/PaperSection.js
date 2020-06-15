@@ -1,11 +1,23 @@
-import React, { useState } from "react"
+import React from "react"
 import "./App.css"
 import { useSpring, animated } from "react-spring"
 
-function PaperSection({ left, top, mass, size }) {
-  const [moveTo, setMoveTo] = useState(0)
+function PaperSection({
+  left,
+  top,
+  frontText,
+  backText,
+  mass,
+  size,
+  section,
+  currentSection,
+}) {
+  let targetYRotation = 0
+  if (section <= currentSection) {
+    targetYRotation = 180
+  }
   const { yRotation } = useSpring({
-    yRotation: moveTo,
+    yRotation: targetYRotation,
     from: { yRotation: 0 },
     config: {
       mass: mass,
@@ -14,9 +26,8 @@ function PaperSection({ left, top, mass, size }) {
   })
 
   return (
-    <div style={{ perspective: "1000px" }}>
+    <div>
       <animated.div
-        onClick={() => setMoveTo(180)}
         style={{
           top: top,
           left: left,
@@ -33,17 +44,17 @@ function PaperSection({ left, top, mass, size }) {
           border: "1px solid darkgrey",
           transform: yRotation.interpolate(
             (yRotation) =>
-              `rotateY(${yRotation}deg) translate3d(-${size / 2}px, 0px, 0px)`
+              `rotateY(${180 + yRotation}deg) 
+               translate3d(${size / 2}px, 0px, 0px)`
           ),
         }}
       >
-        1
+        {backText}
       </animated.div>
       <animated.div
         style={{
           top: top,
           left: left,
-          zIndex: -100,
           width: size,
           height: size,
           position: "fixed",
@@ -53,16 +64,16 @@ function PaperSection({ left, top, mass, size }) {
           lineHeight: `${size}px`,
           fontSize: "5rem",
           borderRadius: "7px",
+          backfaceVisibility: "hidden",
           border: "1px solid darkgrey",
           transform: yRotation.interpolate(
             (yRotation) =>
-              `rotateY(${180 + yRotation}deg) translate3d(${
-                size / 2
-              }px, 0px, 0px)`
+              `rotateY(${yRotation}deg) 
+               translate3d(-${size / 2}px, 0px, 0px)`
           ),
         }}
       >
-        ?
+        {frontText}
       </animated.div>
     </div>
   )
