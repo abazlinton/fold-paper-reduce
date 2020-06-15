@@ -45,8 +45,9 @@ const  PaperSection = function({
           transform: yRotation.interpolate(
             (yRotation) =>
               `rotateY(${180 + yRotation}deg) 
-               translate3d(${size / 2}px, 0px, 0px)`
+               translate3d(${size / 2}px, 0px, 1px)`
           ),
+          // Safari: Have to push backface 1px into the screen so clear which is behind
         }}
       >
         {backText}
