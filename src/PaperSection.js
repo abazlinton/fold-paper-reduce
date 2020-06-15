@@ -24,7 +24,6 @@ const  PaperSection = function({
       mass: mass,
       clamp: true,
     },
-    onRest: { yRotation: () => foldFinished() }
   })
 
   return (
