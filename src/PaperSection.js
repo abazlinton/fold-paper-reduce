@@ -2,7 +2,7 @@ import React from "react"
 import "./App.css"
 import { useSpring, animated } from "react-spring"
 
-function PaperSection({
+const  PaperSection = function({
   left,
   top,
   frontText,
@@ -11,18 +11,20 @@ function PaperSection({
   size,
   section,
   currentSection,
+  foldFinished
 }) {
+
   let targetYRotation = 0
-  if (section <= currentSection) {
+  if (currentSection >= section){
     targetYRotation = 180
   }
   const { yRotation } = useSpring({
-    yRotation: targetYRotation,
-    from: { yRotation: 0 },
+    to: { yRotation: targetYRotation },
     config: {
       mass: mass,
       clamp: true,
     },
+    onRest: { yRotation: () => foldFinished() }
   })
 
   return (
