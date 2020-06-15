@@ -40,7 +40,7 @@ const  PaperSection = function({
           fontSize: "4rem",
           borderRadius: "10px",
           backfaceVisibility: "hidden",
-          border: "1px solid darkgrey",
+          borderRight: "2px solid lightgrey",
           transform: yRotation.interpolate(
             (yRotation) =>
               `rotateY(${180 + yRotation}deg) 
@@ -65,7 +65,7 @@ const  PaperSection = function({
           fontSize: "4rem",
           borderRadius: "10px",
           backfaceVisibility: "hidden",
-          border: "1px solid darkgrey",
+          borderRight: "2px solid darkgrey",
           transform: yRotation.interpolate(
             (yRotation) =>
               `rotateY(${yRotation}deg) 
