@@ -6,7 +6,6 @@ function PaperSections() {
   const [sections, setSections] = useState([1, 2, 3, 4, 5])
 
   function onClick(){
-    console.log(currentSection)
     const nextSections = sections.slice()
     if (currentSection > 0) {
       nextSections[currentSection] = nextSections.slice(currentSection - 1, currentSection + 1).reduce((sum, cur) => sum + cur)
@@ -18,15 +17,15 @@ function PaperSections() {
   const paperSections = sections.map((section, index) => {
     if (index < currentSection - 1) return null
     return <PaperSection
-    left={100 + (index * 150)}
-    top={100}
-    size={150}
-    mass={400}
-    frontText={section}
-    backText="?"
-    currentSection={currentSection}
-    section={index + 1}
-    key={index}
+      left={100 + (index * 150)}
+      top={100}
+      size={150}
+      mass={400}
+      frontText={section}
+      backText="?"
+      currentSection={currentSection}
+      section={index + 1}
+      key={index}
   />
   })
 
