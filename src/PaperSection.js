@@ -10,8 +10,7 @@ const  PaperSection = function({
   mass,
   size,
   section,
-  currentSection,
-  foldFinished
+  currentSection
 }) {
 
   let targetYRotation = 0

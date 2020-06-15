@@ -26,6 +26,7 @@ function PaperSections() {
     backText="?"
     currentSection={currentSection}
     section={index + 1}
+    key={index}
   />
   })
 
