@@ -6,7 +6,11 @@ import PaperSections from './PaperSections';
 
 ReactDOM.render(
   <React.StrictMode>
-    <PaperSections></PaperSections>
+    <PaperSections
+      sections={[6, 7, 3, 15, 11]}
+      sectionSize={150}
+    >
+    </PaperSections>
   </React.StrictMode>,
   document.getElementById('root')
 );

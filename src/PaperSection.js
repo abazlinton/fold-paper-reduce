@@ -1,5 +1,4 @@
 import React from "react"
-import "./App.css"
 import { useSpring, animated } from "react-spring"
 
 const  PaperSection = function({
@@ -33,13 +32,13 @@ const  PaperSection = function({
           left: left,
           width: size,
           height: size,
-          position: "fixed",
+          position: "absolute",
           backgroundColor: "#F7F3E3",
           textAlign: "center",
           verticalAlign: "middle",
           lineHeight: `${size}px`,
-          fontSize: "5rem",
-          borderRadius: "7px",
+          fontSize: "4rem",
+          borderRadius: "10px",
           backfaceVisibility: "hidden",
           border: "1px solid darkgrey",
           transform: yRotation.interpolate(
@@ -58,13 +57,13 @@ const  PaperSection = function({
           left: left,
           width: size,
           height: size,
-          position: "fixed",
+          position: "absolute",
           backgroundColor: "#F7F3E3",
           textAlign: "center",
           verticalAlign: "middle",
           lineHeight: `${size}px`,
-          fontSize: "5rem",
-          borderRadius: "7px",
+          fontSize: "4rem",
+          borderRadius: "10px",
           backfaceVisibility: "hidden",
           border: "1px solid darkgrey",
           transform: yRotation.interpolate(
