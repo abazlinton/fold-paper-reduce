@@ -33,14 +33,15 @@ const  PaperSection = function({
           width: size,
           height: size,
           position: "absolute",
-          backgroundColor: "#F7F3E3",
+          backgroundColor: "#416788",
           textAlign: "center",
           verticalAlign: "middle",
           lineHeight: `${size}px`,
           fontSize: "4rem",
+          color: "#E0E0E2",
           borderRadius: "10px",
           backfaceVisibility: "hidden",
-          borderRight: "2px solid lightgrey",
+          borderRight: "2px solid #B5BAD0",
           transform: yRotation.interpolate(
             (yRotation) =>
               `rotateY(${180 + yRotation}deg) 
@@ -58,14 +59,15 @@ const  PaperSection = function({
           width: size,
           height: size,
           position: "absolute",
-          backgroundColor: "#F7F3E3",
+          backgroundColor: "#416788",
           textAlign: "center",
           verticalAlign: "middle",
           lineHeight: `${size}px`,
           fontSize: "4rem",
+          color: "#E0E0E2",
           borderRadius: "10px",
           backfaceVisibility: "hidden",
-          borderRight: "2px solid darkgrey",
+          borderRight: "2px solid #B5BAD0",
           transform: yRotation.interpolate(
             (yRotation) =>
               `rotateY(${yRotation}deg) 

@@ -1,4 +1,14 @@
 button {
   font-size: 3rem;
   padding: 1rem;
+  background-color: #E0E0E2;
+  border: none;
+  color: #416788;
+  text-decoration: none;
+  display: inline-block;
+  font-weight: 600;
+}
+
+html {
+  background-color: #7389AE;
 }
