@@ -20,7 +20,9 @@ const  PaperSection = function({
     to: { yRotation: targetYRotation },
     config: {
       mass: mass,
-      clamp: true,
+      clamp: false,
+      tension: 500,
+      friction: 40
     },
   })
 

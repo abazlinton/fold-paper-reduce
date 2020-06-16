@@ -23,7 +23,7 @@ function PaperSections({ sections, sectionSize }) {
       left={100 + (index * sectionSize)}
       top={100}
       size={sectionSize}  
-      mass={100}
+      mass={5}
       frontText={currentSection === index + 1 ? runningTotalLookup[index] : section}
       backText={runningTotalLookup[index + 1]}
       currentSection={currentSection}
@@ -37,7 +37,7 @@ function PaperSections({ sections, sectionSize }) {
       <div style={{ perspective: "1000px" }}>
         {paperSections.slice().reverse()}
       </div>
-      <button onClick={onClick}>reduce</button>
+      <button onClick={onClick}>reduce (AKA left-fold)</button>
     </Fragment>
   )
 }
